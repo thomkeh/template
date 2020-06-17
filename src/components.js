@@ -37,6 +37,7 @@ import { DMath }           from './components/d-math';
 import { References }      from './components/d-references';
 import { TOC }             from './components/d-toc';
 import { Figure }          from './components/d-figure';
+import { FigureCaption }          from './components/d-figure-caption';
 import { Interstitial }    from './components/d-interstitial';
 import { Slider }          from './ui/d-slider';
 
@@ -85,7 +86,7 @@ const initialize = function() {
   const components = [
     Abstract, Appendix, Article, Bibliography, Byline, Cite, CitationList, Code,
     Footnote, FootnoteList, FrontMatter, HoverBox, Title, DMath, References, TOC, Figure,
-    Slider, Interstitial
+    FigureCaption, Slider, Interstitial
   ];
 
   const distillComponents = [DistillHeader, DistillAppendix, DistillFooter];

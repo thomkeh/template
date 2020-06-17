@@ -31,6 +31,7 @@ ${katexCSSTag}
 :host {
   display: inline-block;
   contain: style;
+  text-indent: 0;
 }
 
 :host([block]) {

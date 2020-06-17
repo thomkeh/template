@@ -17,8 +17,8 @@
 d-byline {
   contain: style;
   overflow: hidden;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  font-size: 0.8rem;
+  /* border-top: 1px solid rgba(0, 0, 0, 0.1); */
+  font-size: 1.2rem;
   line-height: 1.8em;
   padding: 1.5rem 0;
   min-height: 1.8em;
@@ -26,13 +26,13 @@ d-byline {
 
 
 d-byline .byline {
-  grid-template-columns: 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr; */
   grid-column: text;
 }
 
 @media(min-width: 768px) {
   d-byline .byline {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
   }
 }
 
@@ -44,6 +44,7 @@ d-byline .authors-affiliations {
 
 @media(min-width: 768px) {
   d-byline .authors-affiliations {
+    grid-template-columns: 1fr 1fr 1fr;
     margin-bottom: 0;
   }
 }
@@ -72,8 +73,8 @@ d-article d-byline a:hover {
   border-bottom: none;
 }
 
-d-byline p.author {
-  font-weight: 500;
+d-byline p.author-name {
+  font-weight: bold;
 }
 
 d-byline .affiliations {

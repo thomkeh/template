@@ -23,6 +23,22 @@ d-citation-list .references {
   grid-column: text;
 }
 
+d-citation-list ol.references {
+  list-style: none;
+  counter-reset: reference-counter;
+}
+
+d-citation-list ol.references li {
+  counter-increment: reference-counter;
+  position: relative;
+}
+
+d-citation-list ol.references li::before {
+  content: "[" counter(reference-counter) "]\\0000a0";
+  position: absolute;
+  left: -1.3rem;
+}
+
 d-citation-list .references .title {
   font-weight: 500;
 }

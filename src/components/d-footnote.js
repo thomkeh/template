@@ -22,14 +22,14 @@ d-math[block] {
 }
 
 :host {
-
+  font-size: 0.75rem;
 }
 
 sup {
-  line-height: 1em;
-  font-size: 0.75em;
+  line-height: 1rem;
+  font-size: 0.75rem;
   position: relative;
-  top: -.5em;
+  top: -.5rem;
   vertical-align: baseline;
 }
 
@@ -44,15 +44,15 @@ span {
 
 </style>
 
+<sup>
+  <span id="fn-" data-hover-ref=""></span>
+</sup>
+
 <d-hover-box>
   <div class="footnote-container">
     <slot id="slot"></slot>
   </div>
 </d-hover-box>
-
-<sup>
-  <span id="fn-" data-hover-ref=""></span>
-</sup>
 
 `);
 

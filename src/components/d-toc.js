@@ -36,14 +36,37 @@ export function renderTOC(element, headings) {
   d-toc {
     contain: layout style;
     display: block;
+    grid-column: text;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
   }
 
-  d-toc ul {
-    padding-left: 0;
+  d-toc ol {
+    margin-top: 0.5rem;
+    list-style-type: none;
+    counter-reset: item;
+    margin: 0;
+    padding: 0;
   }
-
-  d-toc ul > ul {
-    padding-left: 24px;
+  
+  d-toc ol > li {
+    display: table;
+    counter-increment: item;
+    margin-bottom: 0.6em;
+  }
+  
+  d-toc ol > li::before {
+    content: counters(item, ".") " ";
+    display: table-cell;
+    padding-right: 0.6em;    
+  }
+  
+  d-toc li ol > li {
+    margin: 0;
+  }
+  
+  d-toc li ol > li::before {
+    content: counters(item, ".") " ";
   }
 
   d-toc a {
@@ -51,30 +74,44 @@ export function renderTOC(element, headings) {
     text-decoration: none;
   }
 
-  </style>
-  <nav role="navigation" class="table-of-contents"></nav>
-  <h2>Table of contents</h2>
-  <ul>`;
+  d-toc .toc-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+  }
 
+  </style>
+  <nav role="navigation" class="table-of-contents">
+  <p class="toc-header">Contents</p>
+  <ol>`;
+
+  let isFirst = true;
   for (const el of headings) {
     // should element be included in TOC?
     const isInTitle = el.parentElement.tagName == 'D-TITLE';
     const isException = el.getAttribute('no-toc');
-    if (isInTitle || isException) continue;
+    const tagName = el.tagName;
+    if (isInTitle || isException || (tagName !== 'H2' && tagName !== 'H3')) continue;
     // create TOC entry
     const title = el.textContent;
     const link = '#' + el.getAttribute('id');
 
-    let newLine = '<li>' + '<a href="' + link + '">' + title + '</a>' + '</li>';
-    if (el.tagName == 'H3') {
-      newLine = '<ul>' + newLine + '</ul>';
+    let newLine = '<a href="' + link + '">' + title + '</a>';
+    if (tagName === 'H2') {
+      newLine = '<li><b>' + newLine + '</b><ol>';
+      if (isFirst) {
+        isFirst = false;
+      } else {
+        newLine = '</ol></li>' + newLine
+      }
     } else {
-      newLine += '<br>';
+      // newLine += '<br>';
+      newLine = '<li>' + newLine + '</li>';
     }
     ToC += newLine;
 
   }
 
-  ToC += '</ul></nav>';
+  ToC += '</ol></nav>';
   element.innerHTML = ToC;
 }

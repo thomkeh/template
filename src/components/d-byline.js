@@ -16,12 +16,11 @@
 
 export function bylineTemplate(frontMatter) {
   return `
-  <div class="byline grid">
+  <div class="byline">
     <div class="authors-affiliations grid">
-      <h3>Authors</h3>
-      <h3>Affiliations</h3>
       ${frontMatter.authors.map(author => `
-        <p class="author">
+        <div class="author">
+        <p class="author-name">
           ${author.personalURL ? `
             <a class="name" href="${author.personalURL}">${author.name}</a>` : `
             <span class="name">${author.name}</span>`}
@@ -31,8 +30,10 @@ export function bylineTemplate(frontMatter) {
           affiliation.url ? `<a class="affiliation" href="${affiliation.url}">${affiliation.name}</a>` : `<span class="affiliation">${affiliation.name}</span>`
         ).join(', ')}
         </p>
+        </div>
       `).join('')}
     </div>
+    <!--
     <div>
       <h3>Published</h3>
       ${frontMatter.publishedDate ? `
@@ -45,6 +46,7 @@ export function bylineTemplate(frontMatter) {
         <p><a href="https://doi.org/${frontMatter.doi}">${frontMatter.doi}</a></p>` : `
         <p><em>No DOI yet.</em></p>`}
     </div>
+    -->
   </div>
 `;
 }

@@ -20,18 +20,27 @@ const T = Template('d-abstract', `
   :host {
     font-size: 1.25rem;
     line-height: 1.6em;
-    color: rgba(0, 0, 0, 0.7);
-    -webkit-font-smoothing: antialiased;
+    /* color: rgba(0, 0, 0, 0.7); */
+    /* -webkit-font-smoothing: antialiased; */
+  }
+
+  :host h3 {
+    grid-column: text;
+    text-align: center;
+    margin-bottom: 0.5rem;
   }
 
   ::slotted(p) {
     margin-top: 0;
     margin-bottom: 1em;
-    grid-column: text-start / middle-end;
+    grid-column: text;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
   ${body('d-abstract')}
 </style>
 
+<h3 class="abstract">Abstract</h3>
 <slot></slot>
 `);
 
