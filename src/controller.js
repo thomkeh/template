@@ -160,6 +160,11 @@ export const Controller = {
           byline.frontMatter = frontMatter;
         }
 
+        const header = document.querySelector("d-header");
+        if (header) {
+          header.frontMatter = frontMatter;
+        }
+
         if (data.katex) {
           DMath.katexOptions = data.katex;
         }

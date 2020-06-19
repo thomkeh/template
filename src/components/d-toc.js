@@ -19,8 +19,8 @@ export class TOC extends HTMLElement {
   connectedCallback() {
     if (!this.getAttribute('prerendered')) {
       window.onload = () => {
-        const article = document.querySelector('d-article');
-        const headings = article.querySelectorAll('h2, h3');
+        const article = document.querySelector('article');
+        const headings = article.querySelectorAll('h1, h2');
         renderTOC(this, headings);
       };
     }
@@ -76,7 +76,8 @@ export function renderTOC(element, headings) {
 
   d-toc .toc-header {
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: normal;
+    font-family: 'Times New Roman SC', serif;
     padding-bottom: 1rem;
   }
 
@@ -91,13 +92,13 @@ export function renderTOC(element, headings) {
     const isInTitle = el.parentElement.tagName == 'D-TITLE';
     const isException = el.getAttribute('no-toc');
     const tagName = el.tagName;
-    if (isInTitle || isException || (tagName !== 'H2' && tagName !== 'H3')) continue;
+    if (isInTitle || isException) continue;
     // create TOC entry
     const title = el.textContent;
     const link = '#' + el.getAttribute('id');
 
     let newLine = '<a href="' + link + '">' + title + '</a>';
-    if (tagName === 'H2') {
+    if (tagName === 'H1') {
       newLine = '<li><b>' + newLine + '</b><ol>';
       if (isFirst) {
         isFirst = false;

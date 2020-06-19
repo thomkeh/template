@@ -33,11 +33,11 @@ import { FootnoteList }    from './components/d-footnote-list';
 import { FrontMatter }     from './components/d-front-matter';
 import { HoverBox }        from './components/d-hover-box';
 import { Title }           from './components/d-title';
+import { Header }           from './components/d-header';
 import { DMath }           from './components/d-math';
 import { References }      from './components/d-references';
 import { TOC }             from './components/d-toc';
 import { Figure }          from './components/d-figure';
-import { FigureCaption }          from './components/d-figure-caption';
 import { Interstitial }    from './components/d-interstitial';
 import { Slider }          from './ui/d-slider';
 
@@ -86,7 +86,7 @@ const initialize = function() {
   const components = [
     Abstract, Appendix, Article, Bibliography, Byline, Cite, CitationList, Code,
     Footnote, FootnoteList, FrontMatter, HoverBox, Title, DMath, References, TOC, Figure,
-    FigureCaption, Slider, Interstitial
+    Header, Slider, Interstitial
   ];
 
   const distillComponents = [DistillHeader, DistillAppendix, DistillFooter];

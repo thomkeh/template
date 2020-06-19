@@ -30,6 +30,7 @@ const extractors = new Map([
 /* Transforms */
 import HTML from './transforms/html';
 import Byline from './transforms/byline';
+import Header from './transforms/header';
 import OptionalComponents from './transforms/optional-components';
 import Mathematics from './transforms/mathematics';
 import Meta from './transforms/meta';
@@ -46,6 +47,7 @@ const transforms = new Map([
   ['OptionalComponents', OptionalComponents],
   ['TOC', TOC],
   ['Byline', Byline],
+  ['Header', Header],
   ['Mathematics', Mathematics],
   ['Meta', Meta],
   ['Typeset', Typeset],

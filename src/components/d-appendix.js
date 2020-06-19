@@ -19,19 +19,19 @@ const T = Template('d-appendix', `
 
 d-appendix {
   contain: layout style;
-  font-size: 0.8em;
+  font-size: 1rem;
   line-height: 1.7em;
   margin-top: 60px;
   margin-bottom: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  color: rgba(0,0,0,0.5);
+  color: rgba(0,0,0,0.7);
   padding-top: 60px;
   padding-bottom: 48px;
 }
 
 d-appendix h3 {
   grid-column: page-start / text-start;
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: 500;
   margin-top: 1em;
   margin-bottom: 0;

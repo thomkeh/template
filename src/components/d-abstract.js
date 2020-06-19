@@ -18,8 +18,8 @@ import { body } from '../helpers/layout';
 const T = Template('d-abstract', `
 <style>
   :host {
-    font-size: 1.25rem;
-    line-height: 1.6em;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
     /* color: rgba(0, 0, 0, 0.7); */
     /* -webkit-font-smoothing: antialiased; */
   }
@@ -28,6 +28,8 @@ const T = Template('d-abstract', `
     grid-column: text;
     text-align: center;
     margin-bottom: 0.5rem;
+    font-family: 'Times New Roman SC', serif;
+    font-weight: normal;
   }
 
   ::slotted(p) {

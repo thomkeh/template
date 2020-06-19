@@ -15,10 +15,10 @@
 import { renderTOC } from '../components/d-toc';
 
 export default function(dom) {
-  const article = dom.querySelector('d-article');
+  const article = dom.querySelector('article');
   const toc = dom.querySelector('d-toc');
   if (toc) {
-    const headings = article.querySelectorAll('h2, h3');
+    const headings = article.querySelectorAll('h1, h2');
     renderTOC(toc, headings);
     toc.setAttribute('prerendered', 'true');
   }

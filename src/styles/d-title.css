@@ -28,11 +28,15 @@ d-title {
 
 d-title h1 {
   grid-column: text;
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 1.7rem;
+  font-family: 'Times New Roman SC', serif;
+  font-weight: normal;
   line-height: 1.1em;
   margin: 0 0 0.5rem;
   text-align: center;
+  -moz-hyphens: none;
+  -webkit-hyphens: none;
+  hyphens: none;
 }
 
 @media(min-width: 768px) {

@@ -1,2 +1,5 @@
 .DS_Store
 node_modules
+/examples/template.v2.js
+/dist/
+/examples/transforms.v2.js_

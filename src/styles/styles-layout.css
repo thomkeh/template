@@ -19,10 +19,11 @@
   distill-header,
   d-title,
   d-abstract,
-  d-article,
+  article,
   d-appendix,
   distill-appendix,
   d-byline,
+  d-header,
   d-footnote-list,
   d-citation-list,
   distill-footer {
@@ -35,10 +36,11 @@
 distill-header,
 d-title,
 d-abstract,
-d-article,
+article,
 d-appendix,
 distill-appendix,
 d-byline,
+d-header,
 d-footnote-list,
 d-citation-list,
 distill-footer {
@@ -58,10 +60,11 @@ distill-footer {
   distill-header,
   d-title,
   d-abstract,
-  d-article,
+  article,
   d-appendix,
   distill-appendix,
   d-byline,
+  d-header,
   d-footnote-list,
   d-citation-list,
   distill-footer {
@@ -79,10 +82,11 @@ distill-footer {
   distill-header,
   d-title,
   d-abstract,
-  d-article,
+  article,
   d-appendix,
   distill-appendix,
   d-byline,
+  d-header,
   d-footnote-list,
   d-citation-list,
   distill-footer {
@@ -100,10 +104,11 @@ distill-footer {
   distill-header,
   d-title,
   d-abstract,
-  d-article,
+  article,
   d-appendix,
   distill-appendix,
   d-byline,
+  d-header,
   d-footnote-list,
   d-citation-list,
   distill-footer {
@@ -124,7 +129,7 @@ distill-footer {
 }
 
 /* .l-body,
-d-article > *  {
+article > *  {
   grid-column: text;
 }
 
@@ -168,7 +173,7 @@ d-figure {
 
 /* Aside */
 
-d-article aside {
+article aside {
   grid-column: gutter;
   font-size: 12px;
   line-height: 1.6em;

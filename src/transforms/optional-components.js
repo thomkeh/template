@@ -23,11 +23,11 @@
 
 export default function(dom, data) {
   const body = dom.body;
-  const article = body.querySelector('d-article');
+  const article = body.querySelector('article');
 
   // If we don't have an article tag, something weird is going on—giving up.
   if (!article) {
-    console.warn('No d-article tag found; skipping adding optional components!');
+    console.warn('No article tag found; skipping adding optional components!');
     return;
   }
 
@@ -50,6 +50,7 @@ export default function(dom, data) {
   let h1 = title.querySelector('h1');
   if (!h1) {
     h1 = dom.createElement('h1');
+    h1.id = "document-title"
     h1.textContent = data.title;
     title.insertBefore(h1, title.firstChild);
   }
