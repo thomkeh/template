@@ -32,9 +32,14 @@ body {
 html {
   font-size: 16px;
   line-height: 1.6em;
-  text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+}
+
+@media screen {
+  html {
+    text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
 }
 
 @media(min-width: 768px) {

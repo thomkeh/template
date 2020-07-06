@@ -17,8 +17,8 @@
 article {
   contain: layout style;
   overflow-x: hidden;
-  font-size: 1.2rem;
-  line-height: 1.8rem;
+  font-size: 1.0rem;
+  line-height: 1.4rem;
   /* border-top: 1px solid rgba(0, 0, 0, 0.1); */
   /* padding-top: 2rem; */
   /* color: rgba(0, 0, 0, 0.8); */
@@ -75,7 +75,7 @@ article h1 {
   counter-increment: h-one;
   counter-reset: h-two;
   font-weight: normal;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-family: 'Times New Roman SC', serif;
   line-height: 1.25em;
   margin: 2rem 0 0.1rem 0;
@@ -96,8 +96,9 @@ article h1::before {
 
 article h2 {
   counter-increment: h-two;
+  counter-reset: h-three;
   font-weight: normal;
-  font-size: 1.4rem;
+  font-size: 1.0rem;
   font-family: 'Times New Roman SC', serif;
   line-height: 1.4em;
   margin-bottom: 0.5rem;
@@ -109,13 +110,17 @@ article h2::before {
   font-family: 'Times New Roman', serif;
 }
 
-/* H4 */
+/* h3 */
 
-article h4 {
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 14px;
-  line-height: 1.4em;
+article h3 {
+  font-family: "Times New Roman SC", serif;
+  font-size: 1.0rem;
+  font-weight: normal;
+  counter-increment: h-three;
+}
+article h3::before {
+  font-family: "Times New Roman", serif;
+  content: counter(h-one) "." counter(h-two) "." counter(h-three) "\0000a0\0000a0\0000a0";
 }
 
 article a {
@@ -275,4 +280,25 @@ article table td {
 
 article table tbody :first-child td {
   padding-top: 2px;
+}
+
+article q::before {
+  content: "“";
+}
+
+article q::after {
+  content: "”";
+}
+
+@media all {
+  br[page] {
+    display: none;
+  }
+}
+
+@media print {
+  br[page] {
+    display: block;
+    page-break-before: always;
+  }
 }

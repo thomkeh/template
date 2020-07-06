@@ -28,7 +28,7 @@ d-title {
 
 d-title h1 {
   grid-column: text;
-  font-size: 1.7rem;
+  font-size: 2.0rem;
   font-family: 'Times New Roman SC', serif;
   font-weight: normal;
   line-height: 1.1em;
@@ -37,12 +37,6 @@ d-title h1 {
   -moz-hyphens: none;
   -webkit-hyphens: none;
   hyphens: none;
-}
-
-@media(min-width: 768px) {
-  d-title h1 {
-    font-size: 2.7rem;
-  }
 }
 
 d-title p {

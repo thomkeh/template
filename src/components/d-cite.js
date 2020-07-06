@@ -30,12 +30,13 @@ const T = Template(
 }
 
 .citation-number {
-  cursor: default;
+  /*cursor: default;*/
   white-space: nowrap;
   /*font-family: -apple-system, BlinkMacSystemFont, "Roboto", Helvetica, sans-serif;*/
   /*font-size: 75%;/*
   /*line-height: 1.1em;*/
   color: hsla(206, 90%, 20%, 0.7);
+  text-decoration: none;
   /*
   display: inline-block;
   text-align: center;
@@ -72,7 +73,7 @@ ul li:last-of-type {
 <d-hover-box id="hover-box"></d-hover-box>
 
 <div id="citation-" class="citation">
-  <span class="citation-number"></span>
+  <a class="citation-number"></a>
 </div>
 `
 );
@@ -155,6 +156,7 @@ export class Cite extends T(HTMLElement) {
     });
     const textContent = "[" + numberStrings.join(", ") + "]";
     this.innerSpan.textContent = textContent;
+    this.innerSpan.href = "#" + this.key;
   }
 
   set entries(entries) {

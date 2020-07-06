@@ -32,30 +32,64 @@
   }
 }
 
-.base-grid,
-distill-header,
-d-title,
-d-abstract,
-article,
-d-appendix,
-distill-appendix,
-d-byline,
-d-header,
-d-footnote-list,
-d-citation-list,
-distill-footer {
-  display: grid;
-  justify-items: stretch;
-  grid-template-columns: [screen-start] 8px [page-start kicker-start text-start gutter-start middle-start] 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr [text-end page-end gutter-end kicker-end middle-end] 8px [screen-end];
-  grid-column-gap: 8px;
+@media screen {
+  .base-grid,
+  distill-header,
+  d-title,
+  d-abstract,
+  article,
+  d-appendix,
+  distill-appendix,
+  d-byline,
+  d-header,
+  d-footnote-list,
+  d-citation-list,
+  distill-footer {
+    display: grid;
+    justify-items: stretch;
+    grid-template-columns: [screen-start] 8px [page-start kicker-start text-start gutter-start middle-start] 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr [text-end page-end gutter-end kicker-end middle-end] 8px [screen-end];
+    grid-column-gap: 8px;
+  }
+
+  .grid {
+    display: grid;
+    grid-column-gap: 8px;
+  }
+
+  .base-grid {
+    grid-column: screen;
+  }
 }
 
-.grid {
-  display: grid;
-  grid-column-gap: 8px;
+@media print {
+  .base-grid,
+  distill-header,
+  d-title,
+  d-abstract,
+  article,
+  d-appendix,
+  distill-appendix,
+  d-byline,
+  d-header,
+  d-footnote-list,
+  d-citation-list,
+  distill-footer {
+    display: unset;
+    justify-items: unset;
+    grid-template-columns: none;
+    grid-column-gap: 0;
+  }
+
+  .grid {
+    grid-column-gap: 0;
+  }
+
+  .base-grid {
+    grid-column: auto;
+  }
 }
 
-@media(min-width: 768px) {
+@media screen and (min-width: 768px) {
   .base-grid,
   distill-header,
   d-title,
@@ -77,7 +111,7 @@ distill-footer {
   }
 }
 
-@media(min-width: 1000px) {
+@media screen and (min-width: 1000px) {
   .base-grid,
   distill-header,
   d-title,
@@ -99,7 +133,7 @@ distill-footer {
   }
 }
 
-@media(min-width: 1180px) {
+@media screen and (min-width: 1180px) {
   .base-grid,
   distill-header,
   d-title,
@@ -119,13 +153,6 @@ distill-footer {
   .grid {
     grid-column-gap: 32px;
   }
-}
-
-
-
-
-.base-grid {
-  grid-column: screen;
 }
 
 /* .l-body,

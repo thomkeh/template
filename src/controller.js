@@ -167,6 +167,10 @@ export const Controller = {
 
         if (data.katex) {
           DMath.katexOptions = data.katex;
+        } else {
+          DMath.katexOptions = {"delimiters": [
+            {"left": "$", "right": "$", "display": false}
+          ]};
         }
       }
     },

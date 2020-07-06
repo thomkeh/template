@@ -18,8 +18,8 @@ import { body } from '../helpers/layout';
 const T = Template('d-abstract', `
 <style>
   :host {
-    font-size: 1.2rem;
-    line-height: 1.8rem;
+    font-size: 1.0rem;
+    line-height: 1.4rem;
     /* color: rgba(0, 0, 0, 0.7); */
     /* -webkit-font-smoothing: antialiased; */
   }

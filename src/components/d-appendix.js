@@ -20,13 +20,11 @@ const T = Template('d-appendix', `
 d-appendix {
   contain: layout style;
   font-size: 1rem;
-  line-height: 1.7em;
-  margin-top: 60px;
-  margin-bottom: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  line-height: 1.6rem;
+  margin: 0;
+  /*border-top: 1px solid rgba(0, 0, 0, 0.1);*/
   color: rgba(0,0,0,0.7);
-  padding-top: 60px;
-  padding-bottom: 48px;
+  padding: 0;
 }
 
 d-appendix h3 {
@@ -38,12 +36,26 @@ d-appendix h3 {
   color: rgba(0,0,0,0.65);
 }
 
+@media print {
+  d-appendix {
+    color: black;
+  }
+
+  d-appendix h3 {
+    color: black;
+    font-family: "Times New Roman SC";
+    font-size: 1.2rem;
+    font-weight: normal;
+  }
+}
+
 d-appendix h3 + * {
   margin-top: 1em;
 }
 
 d-appendix ol {
-  padding: 0 0 0 15px;
+  padding: 0 0 0 1.8rem;
+  margin-left: 0;
 }
 
 @media (min-width: 768px) {

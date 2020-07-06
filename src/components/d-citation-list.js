@@ -36,11 +36,11 @@ d-citation-list ol.references li {
 d-citation-list ol.references li::before {
   content: "[" counter(reference-counter) "]\\0000a0";
   position: absolute;
-  left: -1.3rem;
+  left: -1.7rem;
 }
 
 d-citation-list .references .title {
-  font-weight: 500;
+  font-style: italic;
 }
 `;
 
