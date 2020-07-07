@@ -17,7 +17,7 @@
 export function bylineTemplate(frontMatter) {
   return `
   <div class="byline">
-    <div class="authors-affiliations grid">
+    <div class="authors-affiliations">
       ${frontMatter.authors.map(author => `
         <div class="author">
         <p class="author-name">

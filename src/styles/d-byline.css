@@ -37,9 +37,11 @@ d-byline .byline {
 }
 
 d-byline .authors-affiliations {
-  grid-column-end: span 2;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  /* margin-left: -2rem; */
   margin-bottom: 1em;
+  text-indent: 0;
 }
 
 /*
@@ -61,6 +63,18 @@ d-byline h3 {
 
 d-byline p {
   margin: 0;
+}
+
+d-byline .author {
+  /* margin-left: 2rem; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  margin-bottom: 1rem;
+  /* padding-right: 2rem; */
+  /* width: 15rem; */
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 15rem;
 }
 
 d-byline a,
