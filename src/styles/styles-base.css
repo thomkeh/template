@@ -152,7 +152,7 @@ figcaption {
 }
 
 figcaption::before {
-  content: "Figure " counter(figure-caption) ":";
+  content: "Figure " counter(figure-caption) ": ";
 }
 
 figure.external img {
@@ -171,4 +171,12 @@ figcaption b,
 figcaption strong, {
   font-weight: 600;
   color: rgba(0, 0, 0, 1.0);
+}
+
+table {
+  counter-increment: table-caption;
+}
+
+table > caption::before {
+  content: "Table " counter(table-caption) ": ";
 }
