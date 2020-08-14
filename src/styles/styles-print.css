@@ -19,16 +19,23 @@
   @page {
     size: A4 portrait;
     margin-left: 4cm;
-    margin-top: 1.5cm;
+    margin-top: 2cm;
     margin-right: 4cm;
-    margin-bottom: 1.5cm;
-    @bottom-right {
+    margin-bottom: 2cm;
+    /*
+    @bottom-center {
       content: counter(page) " of " counter(pages);
+      border: solid 1px black;
     }
+    */
   }
 
   html {
-    font-size: 14px;
+    font-size: 12px;
+  }
+
+  body {
+    /* padding-top: 2cm; */
   }
 
   code, table {
@@ -37,10 +44,6 @@
 
   h2, h3 {
     page-break-after: avoid;
-  }
-
-  d-header {
-    visibility: hidden;
   }
 
   d-footer {
@@ -53,10 +56,6 @@
 
   article h1 {
     page-break-after: avoid;
-  }
-
-  d-header {
-    visibility: visible;
   }
 
   table {
