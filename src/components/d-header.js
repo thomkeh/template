@@ -1,8 +1,6 @@
 export function headerTemplate(frontMatter) {
   return `
-  <div class="header">
-      ${frontMatter.published ? frontMatter.published : ''}
-  </div>
+  <p>${frontMatter.header ? frontMatter.header : ''}</p>
 `;
 }
 

@@ -92,6 +92,7 @@ export function mergeFromYMLFrontmatter(target, source) {
       console.error('Don\'t know what to do with published date: ' + source.publishedDate);
     }
   }
+  target.header = source.header
   target.published = source.published;
   target.description = source.description;
   target.authors = source.authors.map( (authorObject) => new Author(authorObject));

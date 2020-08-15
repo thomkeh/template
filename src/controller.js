@@ -193,7 +193,7 @@ export const Controller = {
         console.debug("Runlevel 4: Controller running DOMContentLoaded");
       }
 
-      const frontMatterTag = document.querySelector("d-front-matter");
+      const frontMatterTag = document.querySelector("#front-matter");
       if (frontMatterTag) {
         const data = parseFrontmatter(frontMatterTag);
         Controller.listeners.onFrontMatterChanged({ detail: data });

@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+/*
 @supports not (display: grid) {
   .base-grid,
   distill-header,
@@ -51,61 +52,23 @@
     margin-left: auto;
     margin-right: auto;
   }
-
-  .grid {
-    /* display: grid; */
-    /* grid-column-gap: 8px; */
-  }
-
-  .base-grid {
-    /* grid-column: screen; */
-  }
 }
+*/
 
-@media print {
-  .base-grid,
-  distill-header,
-  d-title,
-  d-abstract,
-  article,
-  d-appendix,
-  distill-appendix,
-  d-byline,
-  d-header,
-  d-footnote-list,
-  d-citation-list,
-  distill-footer {
-    display: unset;
+@media screen {
+  d-document {
+    display: block;
     justify-items: unset;
-    grid-template-columns: none;
-    grid-column-gap: 0;
-  }
-
-  .grid {
-    /* grid-column-gap: 0; */
-  }
-
-  .base-grid {
-    /* grid-column: auto; */
+    width: 35rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
-
 
 /* Aside */
 
 article aside {
-  grid-column: gutter;
   font-size: 12px;
   line-height: 1.6em;
   color: rgba(0, 0, 0, 0.6)
-}
-
-@media(min-width: 768px) {
-  aside {
-    grid-column: gutter;
-  }
-
-  .side {
-    grid-column: gutter;
-  }
 }

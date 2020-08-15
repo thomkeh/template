@@ -19,9 +19,9 @@
   @page {
     size: A4 portrait;
     margin-left: 4cm;
-    margin-top: 2cm;
+    margin-top: 1.0cm;
     margin-right: 4cm;
-    margin-bottom: 2cm;
+    margin-bottom: 0.5cm;
     /*
     @bottom-center {
       content: counter(page) " of " counter(pages);
@@ -32,10 +32,6 @@
 
   html {
     font-size: 12px;
-  }
-
-  body {
-    /* padding-top: 2cm; */
   }
 
   code, table {

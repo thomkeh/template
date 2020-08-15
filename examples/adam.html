@@ -19,12 +19,9 @@
   <script src="template.v2.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-
-<body>
-  <d-front-matter>
-    <script id="distill-front-matter" type="text/json">{
+  <script id="front-matter" type="text/json">{
     "title": "Adam: A Method for Stochastic Optimization",
-    "published": "ICLR 2015",
+    "header": "ICLR 2015",
     "authors": [
       {
         "author":"Diederik P. Kingma",
@@ -38,18 +35,21 @@
       }
     ]
   }</script>
-  </d-front-matter>
-  <d-header></d-header>
+
+<body>
+  <d-document>
   <d-title></d-title>
   <d-byline></d-byline>
   <d-abstract>
     <p>
     We introduce <i>Adam</i>, an algorithm for first-order gradient-based optimization of stochastic objective functions, based on adaptive estimates of lower-order moments.
-    The method is straightforward to implement, is computationally efficient, has little memory requirements, is invariant to diagonal rescaling of the gradients, and is well suited for problems that are large in terms of data and/or parameters.
+    The method is straightforward to implement, is computationally efficient, has little memory requirements,
+    is invariant to diagonal rescaling of the gradients, and is well suited for problems that are large in terms of data and/or parameters.
     The method is also appropriate for non-stationary objectives and problems with very noisy and/or sparse gradients.
     The hyper-parameters have intuitive interpretations and typically require little tuning.
     Some connections to related algorithms, on which <i>Adam</i> was inspired, are discussed.
-    We also analyze the theoretical convergence properties of the algorithm and provide a regret bound on the convergence rate that is comparable to the best known results under the online convex optimization framework.
+    We also analyze the theoretical convergence properties of the algorithm
+    and provide a regret bound on the convergence rate that is comparable to the best known results under the online convex optimization framework.
     Empirical results demonstrate that Adam works well in practice and compares favorably to other stochastic optimization methods.
     Finally, we discuss <i>AdaMax</i>, a variant of <i>Adam</i> based on the infinity norm.
     </p>
@@ -149,3 +149,4 @@
     <d-footnote-list></d-footnote-list>
     <d-citation-list></d-citation-list>
   </d-appendix>
+  </d-document>
